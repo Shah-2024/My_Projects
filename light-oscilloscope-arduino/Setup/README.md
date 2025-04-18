@@ -11,7 +11,7 @@ This is a basic digital oscilloscope built using Arduino and a photoresistor(LDR
 
 ## Circuit Diagram
 
-![Circuit Diagram](Hardware/Circuit.jpg)
+![Circuit Diagram](light-oscilloscope-arduino/Hardware/Circuit.jpg)
 
 **Components**
 - 1x Arduino Uno 
