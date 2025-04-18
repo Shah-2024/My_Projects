@@ -26,7 +26,24 @@ To safely and accurately read light levels using a photoresistor (LDR), we use a
 ### How it Works
 
 A voltage divider splits the input voltage (5V) across two resistors. In our case:
--**R1** = LDR (Whose resistance changes with light)
--**R2** = Fixed resistor (typically 10k ohm)
+- **R1** = LDR (Whose resistance changes with light)
+- **R2** = Fixed resistor (typically 10k ohm)
 
-The voltage at the midpoint (between R1 and R2) is connected to **Arduino A0** (Blue wire). This voltage changes ba 
+The voltage at the midpoint (between R1 and R2) is connected to **Arduino A0** (Blue wire). This voltage changes based on how much light the LDR receives.
+
+- When it's **bright**, the LDR's resistance decreases -> voltage at A0 increases.
+- When it's **dark**, the LDR's resistance increases -> voltage at A0 decreases.
+
+This makes the light intensity directly visible as a waveform change when plotted.
+
+### Wiring Steps
+
+1. Connect one leg of the **LDR** to **5V (Vcc)** on the Arduino.
+2. Connect the **other leg of the LDR** to **A0** and to one end of the **10k ohm resistor**.
+3. Connect the **other leg of the 10k ohm resistor** to **GND**.
+4. Upload the sketch and open the Serial Plotter.
+
+
+## Code
+
+The main Arduino sketch is in '/Arduino_Code/Code.ino'.
