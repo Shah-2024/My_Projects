@@ -11,7 +11,7 @@ This is a basic digital oscilloscope built using Arduino and a photoresistor(LDR
 
 ## Circuit Diagram
 
-![Circuit Diagram](light-oscilloscope-arduino/Hardware/Circuit.jpg)
+![Circuit Diagram](Setup/Circuit.jpg)
 
 **Components**
 - 1x Arduino Uno 
@@ -21,4 +21,12 @@ This is a basic digital oscilloscope built using Arduino and a photoresistor(LDR
 
 ## Voltage Divider Circuit (for LDR input)
 
-To safely and accurately read light levels using a photoresistor (LDR), we use a voltage divider circuit. This converts changes in light into a variable voltage that the Arduino can read through its analog pin.
+To safely and accurately read light levels using a photoresistor (LDR), we use a **voltage divider circuit**. This converts changes in light into a variable voltage that the Arduino can read through its analog pin.
+
+### How it Works
+
+A voltage divider splits the input voltage (5V) across two resistors. In our case:
+-**R1** = LDR (Whose resistance changes with light)
+-**R2** = Fixed resistor (typically 10k ohm)
+
+The voltage at the midpoint (between R1 and R2) is connected to **Arduino A0** (Blue wire). This voltage changes ba 
